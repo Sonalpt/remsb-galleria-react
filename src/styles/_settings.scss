@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'LibreBaskerville-Regular';
+    src: url(../policies/Libre_Baskerville/LibreBaskerville-Regular.ttf);
+}
+@font-face {
+    font-family: 'LibreBaskerville-Italic';
+    src: url(../policies/Libre_Baskerville/LibreBaskerville-Italic.ttf);
+}
+@font-face {
+    font-family: 'LibreBaskerville-Bold';
+    src: url(../policies/Libre_Baskerville/LibreBaskerville-Bold.ttf);
+}
+
+@keyframes galleryAnimationAppear {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+@keyframes galleryAnimationDisappear {
+    0% {
+        opacity: 100%;
+        visibility: visible;
+        display: flex;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+        display: none;
+    }
+}
+@keyframes cardDetailsFadeIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'LibreBaskerville-Bold', sans-serif;
+    font-size: 1.6rem;
+}
+
+main {
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hidden {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.733);
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    animation: galleryAnimationDisappear ease 1050ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    &__image {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        min-width: 70rem;
+        min-height: 70rem;
+    }
+    &__close {
+        font-size: 1.4rem;
+        letter-spacing: 0.3rem;
+        color: white;
+        position: absolute;
+        transform: translateX(-50%);
+        top: 6%;
+        left: 93%;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

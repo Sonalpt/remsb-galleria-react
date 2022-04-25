@@ -1,0 +1,29 @@
+header {
+    .straightBar {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 90%;
+        min-height: 0.2rem;
+        max-height: 0.2rem;
+        background-color: #E5E5E5;
+        margin-bottom: 3rem;
+    }
+}
+
+nav {
+    max-height: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    h1 {
+        
+        font-size: 3.6rem;
+        font-weight: 900;
+    }
+    h2 {
+        font-size: 1.4rem;
+        
+    }
+}

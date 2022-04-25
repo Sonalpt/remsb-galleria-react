@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import { useState, useEffect } from "react";
+import Details from "./pages/Details";
+import Home from "./pages/Home";
+import "./styles/style.scss";
+import artData from "./data.json";
 
-function App() {
+const App = () => {
+  const [selectedDetailsId, setDetailsId] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <main>
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                  artData={artData}
+                  selectedDetailsId={selectedDetailsId}
+                  setDetailsId={setDetailsId}
+                />
+              }
+            />
+            <Route
+              path="/details"
+              element={
+                <Details
+                  artData={artData}
+                  selectedDetailsId={selectedDetailsId}
+                  setDetailsId={setDetailsId}
+                />
+              }
+            />
+            <Route
+              path="/*"
+              element={
+                <Home
+                  artData={artData}
+                  selectedDetailsId={selectedDetailsId}
+                  setDetailsId={setDetailsId}
+                />
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </main>
+    </React.Fragment>
   );
-}
+};
 
 export default App;
