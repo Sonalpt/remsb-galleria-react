@@ -14,19 +14,35 @@ const Details = ({ artData, selectedDetailsId, setDetailsId }) => {
   const slideshowForward = () => {
     if (selectedDetailsId === 14) {
       setDetailsId(14);
-      window.scrollTo(0, 150);
+      if (window.innerWidth <= 768) {
+        window.scrollTo(0, 0);
+      } else {
+        window.scrollTo(0, 150);
+      }
     } else {
       setDetailsId(selectedDetailsId + 1);
-      window.scrollTo(0, 150);
+      if (window.innerWidth <= 768) {
+        window.scrollTo(0, 0);
+      } else {
+        window.scrollTo(0, 150);
+      }
     }
   };
   const slideshowBackward = () => {
     if (selectedDetailsId === 0) {
       setDetailsId(0);
-      window.scrollTo(0, 150);
+      if (window.innerWidth <= 768) {
+        window.scrollTo(0, 0);
+      } else {
+        window.scrollTo(0, 150);
+      }
     } else {
       setDetailsId(selectedDetailsId - 1);
-      window.scrollTo(0, 150);
+      if (window.innerWidth <= 768) {
+        window.scrollTo(0, 0);
+      } else {
+        window.scrollTo(0, 150);
+      }
     }
   };
 

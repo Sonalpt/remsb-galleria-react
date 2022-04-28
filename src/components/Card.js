@@ -10,7 +10,11 @@ const Card = ({ artCard, index, selectedDetailsId, setDetailsId }) => {
           className="card"
           onClick={() => {
             setDetailsId(index);
-            window.scrollTo(0, 1000);
+            if (window.innerWidth <= 768) {
+              window.scrollTo(0, 0);
+            } else {
+              window.scrollTo(0, 150);
+            }
           }}
         >
           <img src={backgroundThumbnail} alt="" />

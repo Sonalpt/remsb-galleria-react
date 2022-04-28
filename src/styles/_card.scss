@@ -6,25 +6,23 @@
     filter: brightness(100%);
     transform-origin: bottom;
     transition: all 250ms ease-in-out;
+    box-shadow: inset 0.5rem 2rem 10rem rgb(0, 0, 0);
     &:hover {
         filter: brightness(130%);
         text-shadow: 0.3rem 0.4rem 0.5rem black;
         transform-origin: bottom;
         transition: all 250ms ease-in-out;
     }
-    img {
-        box-shadow: inset 0.5rem 2rem 1rem black;
-    }
     h3, h4 {
         margin: 0;
         position: absolute;
-        bottom: 9%;
+        bottom: 6%;
         margin-left: 5%;
     }
     h3 {
         font-size: 2.4rem;
         max-width: 30rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
     }
     h4 {
         font-size: 1.3rem;

@@ -13,7 +13,7 @@ const Home = ({ artData, selectedDetailsId, setDetailsId }) => {
       <XMasonry
         maxColumns={4}
         responsive={true}
-        targetBlockWidth={500}
+        targetBlockWidth={400}
         smartUpdateCeil={1000}
       >
         {artData.map((artCard, index) => {
