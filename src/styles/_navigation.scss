@@ -8,6 +8,10 @@ header {
         max-height: 0.2rem;
         background-color: #E5E5E5;
         margin-bottom: 3rem;
+        @media (max-width: 768px) {
+            position: absolute;
+            min-width: 100%;
+        }
     }
 }
 
